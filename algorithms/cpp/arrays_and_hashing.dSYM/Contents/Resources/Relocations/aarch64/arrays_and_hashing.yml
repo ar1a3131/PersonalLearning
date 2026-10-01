@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/aria/Documents/proj/learning/algorithms/cpp/arrays_and_hashing'
+relocations:     []
+...
