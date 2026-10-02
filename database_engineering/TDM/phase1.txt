@@ -6,15 +6,23 @@ manage non-production data in an organizaiton. (protecting PII)
 Specifically, it allows creation of a smaller copy
 of the production data and masking of sensitive data.
 
-1. Data Discovery: used to run sensititve field profiles to identify
-the columns that contain sensitive data. Defines data domains to identify
-sensitive data columns by patterns in the data or column metadata.
-You can run primary/foreign key profiles to discover parent/child
-table relationship constraints.
+1. Data Discovery: 
+    used to run sensititve field profiles to identify
+    the columns that contain sensitive data. Defines data domains to identify
+    sensitive data columns by patterns in the data or column metadata.
+    You can run primary/foreign key profiles to discover parent/child
+    table relationship constraints.
 
-2. Data Subset: used to create a small environment for testing and 
-development and you can define the data type of the subset (based on
-time, function, or geographic location [a time based data subset might
-include recent transactions from all invoice data in a production system]).
+2. Data Subset: 
+    used to create a small environment for testing and 
+    development and you can define the data type of the subset (based on
+    time, function, or geographic location [a time based data subset might
+    include recent transactions from all invoice data in a production system]).
 
-3. 
+3. Data Masking:
+    applies masking rules to source columns and data domains... masking techniques
+    include substitution masking, shuffle masking, key masking, and encryption
+
+4. Data Generation:
+    creating a testing environment with non-prod data, TDM generates data in a 
+    schema that can be used for testing
