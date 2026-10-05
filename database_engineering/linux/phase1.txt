@@ -1,0 +1,86 @@
+1. Red Hat Enterprise Technical Overview (Videos)
+
+    Linux Distro is a complete operating system built around the Linux kernel (central foundation that every Linux system relies on).
+    There is a strong connection between CentOS and RHEL (Red Hat Enterprise Linnux) and they each contribute to the other while also ensuring that new code
+    is submitted as far upstream as possible (CentOS and Fedora are both actually part of the Red Hat distro family, but they all serve
+    different purposes... e.g. Fedora is where all the cutting edge innovation happens first (the upstream project), CentOS is the
+    midstream (rolling preview of whats comoing to the next minor RHEL release), RHEL is the polished enterprise-grade version after testing and QA).
+
+    rpm (Red Hat Package Manager) is used for all three distros. Ubuntu and Debian which use apt, as well as dpkg. rpm packages are
+    not compatible with apt and vice versa.
+
+    SystemD, KVM, and TuneD. are all RHEL innovations.
+
+    Red Hat follows the file heirarchy standard (FHS) makes it so that etc, usr, and var are all where you would expect.
+
+    RHEL releases new versions every 3 years. There's a tool called Leap that makes jumping to the next big version smooth and safe. 
+
+    __________________________
+
+    Intro to the Shell:
+
+    du command tells you how much space is being used by a directory... (e.g. du -sh /home/[username])
+
+    manual for a command: man [command]
+
+    man 5 crontab (gives you file format related pages on the crontab command... check man man for the other pages)
+
+    man man
+
+    ___________________________
+
+    Linux Directories explained:
+
+    - /home: where your personal files live
+    - /etc: Extended Text Configurations, all the config files for your system (if you're changing how you system works, it's probably
+        going to happen in /etc)\
+    - /var: things that change a lot, like logs, mail, or print jobs (check /var/log to see what your system has been up to)
+    - /usr: most of the programs you download end up being in /usr/bin (stands for binaries, which represents executable programs...
+        librares would be below /usr/lib64)
+    - /temp: Linux cleans this directory out ever so often, so don't save anything important there
+    - /root: home dir for the root user/super user... normal users don't have access
+    - /boot: where l=Linux kernel and files to start the system live... don't touch unless troubleshooting
+    - /mnt: temp mounting storage
+    - /run: where linux keeps all sorts of info on the running system... if it needs to store some temp info
+        like a process ID or network socket, then it puts it below /run... this dir is created fresh on every boot
+        and it's wiped out when you restart your system
+    
+
+    __________________________
+
+    Basic File Management:
+
+    ls -lha -> lists out human readable sizes (the h shows the hidden files as well [starts with a .])
+    mkdir -pv [dir name] -> creates a dir if it doesn't exist, but doesn't fail if it already exists
+    touch [filename] -> creates new empty file
+    cp [file1] [new_file] -> copies an existing file into a new file
+
+    Vim notes:
+
+    to create or edit a file = vim [filename]
+
+        Modes (to escape a mode, press esc key):
+            - normal mode: navigating and running commands
+                yy = copy a line
+                p = paste
+                10p = paste the same line 10 times
+                u = undo
+                crtl+r = redo
+            - insert mode: actually typing text (press i)
+            - command mode: saving, searching, quitting, etc. (type a : + the command you want... e.g.: (save and write) :wq or :q!)
+
+        vimtutor
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
