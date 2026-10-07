@@ -137,7 +137,31 @@
             only the root user can change ownership by using chown [username] [file name]   
             (a colon in front [chown :groupname filename] means a group is being assigned owner of filename)  
 
-            chown -R username /filename -> recursively assign ownership to everything in filename   
+            chown -R username /filename -> recursively assign ownership to everything in filename
+
+        __________________________
+
+        Red Hat Content Delivery Network (CDN)
+
+            subscription-manager register -> registers with the CDN... does require internet access
+
+            Red Hat Satelitte is a server that the proxies funnel the content from the CDN back and
+            forth from
+
+            e.g.: dnf search nodejs... dnf install nodejs
+
+            Updates to existing software come in the form of ERRATA (consisting of RHBA, RHEA, RHSA)
+
+            Security advisories are tied to vulnerabilities called CVEs (common vulnerabilities and exposures)
+
+            CVE IDs and CVSS scores
+
+            ................
+            dnf updateinfo list
+            dnf updateinfo info RHSA-2025:10854
+            *****************
+
+            
 
 
 
