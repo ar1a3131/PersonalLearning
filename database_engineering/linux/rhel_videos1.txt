@@ -72,7 +72,80 @@
         vimtutor
 
 
-    
+    Organizing Local Users and Groups:
+
+        /etc stores the user and group info, it stores files like /etc/passwd and /etc/group
+
+        actual password info is in /etc/shadow
+
+        local users are usually used on standalone servers, test machines, or in small environments
+        where you manage access manually.
+
+        to see all local user accounts: cat /etc/passwd
+
+        to create a new local user or group (as an admin):
+
+            sudo -i (to exit out of this sudo env, just type and enter exit... you can also use "su -" instad of sudo -i, except we won't see who it was that used su -)
+            useradd [new user name]
+
+            ...
+
+            groupadd [new group name]
+
+        change the shell type for a user or group:
+
+            usermod -s /bin/zsh [user name]
+
+            groupmod -m [new name of group] [current name of group]
+
+        lock/unlock an account:
+            lock -> passwd -l [user name]
+            unlock -> passwd -u [user name]
+
+        delete a user or group:
+
+            userdel [user name]
+            userdel -r [user name] (this deletes their home directory)
+
+            groupdel [group name]
+
+
+        add user to a group:
+
+            usermod -aG [group name] [user name]
+        (wheel group, only users in that group can use sudo by default in RHEL)
+        
+        
+        switch from root to user:
+            sudo -i -u [user name]
+
+        Red Hat's identity management solution, IDM (included in RHEL subscription with no extra cost)
+
+        __________________________
+
+        Read, write, and execute 
+
+            read = 4
+            write = 2
+            execute = 1
+
+            chmod 001 /filename -> gives execute access to people not in the owning group (d--------x)
+            chmod 005 /filename -> gives read and execute to people not in the owning group (d------r-x)
+
+        Ownership
+
+            only the root user can change ownership by using chown [username] [file name]   
+            (a colon in front [chown :groupname filename] means a group is being assigned owner of filename)  
+
+            chown -R username /filename -> recursively assign ownership to everything in filename   
+
+
+
+
+
+        
+
+        
 
 
 
