@@ -50,6 +50,19 @@
 //   code because it doesn't have to account for 
 //   INTERPRETER OVERHEAD
 
+// C ended up being so efficient and flexible that in 
+// 1973, Dennis Ritchie and Ken Thompson rewrote most of the 
+// Unix operating system using C. Many previous operating 
+// systems had been written in assembly. Unlike assembly, 
+// which produces programs that can only run on specific 
+// CPUs, C has excellent portability, allowing Unix to be 
+// easily recompiled on many different types of computers 
+// and speeding its adoption. 
+
+// C++ allows for OOP, unlike C
+
+// Intro to C++ development:
+
 
 
 
