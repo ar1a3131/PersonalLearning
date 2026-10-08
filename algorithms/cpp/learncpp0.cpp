@@ -3,7 +3,7 @@
 #include <unordered_set>
 #include <unordered_map>
 
-// Chapters 0 and 1 of learncpp.com
+// Chapter 0 of learncpp.com
 
 // machine language/code: binary, etc.
 // assembly: e.g. mov al, 0x61
@@ -61,7 +61,44 @@
 
 // C++ allows for OOP, unlike C
 
-// Intro to C++ development:
+// Intro to the compiler, linker, and libraries:
+// the compiler translates your C++ code into machine 
+// language instructions. These instructions are stored 
+// in an intermediate file called an object file. The 
+// object file also contains other data that is required 
+// or useful in subsequent steps (including data needed 
+// by the linker in step 5, and for debugging in step 7).
+// Object files are typically named name.o or name.obj, 
+// where name is the same name as the .cpp file it was produced from.
+// 
+// After the compiler has successfully finished, another 
+// program called the linker kicks in. The linker’s job is 
+// to combine all of the object files and produce the desired 
+// output file (such as an executable file that you can run). 
+// This process is called linking. If any step in the linking 
+// process fails, the linker will generate an error message 
+// describing the issue and then abort...Almost every C++ 
+// program written utilizes the standard library in some way,
+//  so it’s extremely common to have the C++ standard library 
+// linked into your programs. Most C++ linkers are configured 
+// to link in the standard library by default, so this generally 
+// isn’t something you need to worry about.
+
+
+int main()
+{
+	std::cout << "Hello, world!";
+	return 0;
+}
+
+// to run this in terminal
+//     g++ -o learn0 learncpp0.cpp
+// once you see that learn0 was created:
+//     ./learn0
+// ^ that should print out Hello World!
+
+
+
 
 
 
