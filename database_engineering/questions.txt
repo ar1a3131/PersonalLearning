@@ -1,0 +1,2 @@
+1. Why does [company] (or at least our team) use Informatica for data masking and all the other features offered?
+2. 

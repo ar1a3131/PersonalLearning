@@ -22,7 +22,42 @@ of the production data and masking of sensitive data.
 3. Data Masking:
     applies masking rules to source columns and data domains... masking techniques
     include substitution masking, shuffle masking, key masking, and encryption
+        Techniques:
+            1. Advanced: applies techniques to multiple input and output columns. 
+                You can create an expression to combine multiple columns, you can
+                mask all datatypes.
+            2. credit card number masking
+            3. email address masking
+            4. encryption of source data, you can assign an encryption method to
+                mask the data with, you can encrypt string data types
+            5. expression: apply an expression to a column to create or disguise
+                data. Use expression masking if the expression referenes one column. 
+                If the expression includes multiple columns, use the calculated 
+                masking technique with advanced masking, you can mask all data types.
+            6. IP address masking
+            7. Key: produces deterministic results for the same source data, masking
+                rules, and seed value. You can mask date, numeric, and string datatypes
+            8. Mapplet: applies masking rules from a mapplet (which contains the logic
+                to mask the input columns and return data to the target and can have
+                multiple input and output columns)
+            9. Nullification: replaces a column of data with null value, you can mask
+                datatypes
+            10. phone numbers
+            11. random: produces random, non-repeatable results for the same source data
+                and masking rules (opposite of Key), you can mask date, numeric, and 
+                string datatypes
+            12. shuffle: applies sensitive column values from one row to another row in
+                the same table. You can restrict which rows to shuffle data from. You can
+                mask date, numeric, and string datatypes
+            13. SIN: social insurance numbers, you can mask a string datatypes
+            14. SSN: can mask numeric, date, and string
+            15. Substitution: replaces a column of data with similar, but unrelated data 
+                from a dictionary. You can mask date, numeric, and string datatypes
+            16. URL: applies a built-in mask format to disguise URL data, you can mask a 
+                string datatypes
+
 
 4. Data Generation:
     creating a testing environment with non-prod data, TDM generates data in a 
     schema that can be used for testing
+

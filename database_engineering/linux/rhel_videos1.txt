@@ -141,27 +141,53 @@
 
         __________________________
 
-        Red Hat Content Delivery Network (CDN)
+    Red Hat Content Delivery Network (CDN)
 
-            subscription-manager register -> registers with the CDN... does require internet access
+        subscription-manager register -> registers with the CDN... does require internet access
 
-            Red Hat Satelitte is a server that the proxies funnel the content from the CDN back and
-            forth from
+        Red Hat Satelitte is a server that the proxies funnel the content from the CDN back and
+        forth from
 
-            e.g.: dnf search nodejs... dnf install nodejs
+        e.g.: dnf search nodejs... dnf install nodejs
 
-            Updates to existing software come in the form of ERRATA (consisting of RHBA, RHEA, RHSA)
+        Updates to existing software come in the form of ERRATA (consisting of RHBA, RHEA, RHSA)
 
-            Security advisories are tied to vulnerabilities called CVEs (common vulnerabilities and exposures)
+        Security advisories are tied to vulnerabilities called CVEs (common vulnerabilities and exposures)
 
-            CVE IDs and CVSS scores
+        CVE IDs and CVSS scores
 
-            ................
-            dnf updateinfo list
-            dnf updateinfo info RHSA-2025:10854
-            *****************
+        ................
+        dnf updateinfo list
+        dnf updateinfo info RHSA-2025:10854
+        *****************
 
-            
+    _________________________________________
+
+    Managing Network
+
+        Network manager organizes settings (sometimes called connections) into interface profiles (devices are represented as interfaces).
+        Each profile applies these settings to a single interface, and an interface can only have one active profile at a time.
+        A profile is a set of properties and values that control how the interface behaves (IP addresses, gateways, DNS servers).
+
+        ********************
+        - sudo -i -> (getting a root shell)
+        - nmcli con show -> (nmcli = network manager command line interface and con show = connection show... shorthand of the command = nmcli c s)
+        (after that last command, a list of profiles will show up... you can use one of those profile names in the following command)
+        - nmcli con show [profile name, e.g. ens192]
+
+
+        - ip address show (or ip a s) (this will return lo (loop back interface), and other interfaces)
+
+        (let's now create a profile that allocates a static IP)
+        - nmcli connection add con-name [connection name of choice] type ethernet ifname ens192 ipv4.method manual ipv4.address 'ip addess' ipv4.gateway [ip addess]
+        ipv4.dns 'ip addess' 
+        - ip root show (or ip r s (to show the gateway))
+
+        (to delete a profile, do the following):
+        - nmcli con del [name of profile]
+
+        - nmtui
+
 
 
 

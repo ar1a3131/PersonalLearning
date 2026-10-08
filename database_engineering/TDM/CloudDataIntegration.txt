@@ -1,0 +1,17 @@
+Informatica Intelligent Data Management Cloud (IDMC)
+
+    IDMC is a next-gen iPaaS solution that can be used to exchange data
+    between applications. "Integration platform as a service" (iPaaS) is 
+    a set of automated tools for connecting software applications that 
+    deployed in different environments. iPaaS is often used by large
+    enterprises that need to integrate on-premise applications and 
+    data on cloud applications.
+
+    IDMC allows you to:
+        - import or migrate data between data sources
+        - perform object synchronization to create a copy of data on 
+          multiple applications
+        - design process integration to connect multiple processes
+        - replicate data between data sources for backup/archiving purposes
+
+    
