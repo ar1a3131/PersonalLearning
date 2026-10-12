@@ -14,4 +14,12 @@ Informatica Intelligent Data Management Cloud (IDMC)
         - design process integration to connect multiple processes
         - replicate data between data sources for backup/archiving purposes
 
-    
+    ETL = Extract = pulling data from various source systems [databases, applications, files, etc.], 
+          Transform = Cleaning, formatting, and processing the extracted data to fit the target system's,
+          Load = Loading the transformed data into the target system for storage and analysis
+
+    _________________________________________
+
+    go to Data Integration from informatica cloud link
+
+
