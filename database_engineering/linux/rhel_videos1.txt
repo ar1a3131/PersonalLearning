@@ -188,6 +188,31 @@
 
         - nmtui
 
+    __________________________
+
+    Managing System Startup Services with SystemD
+
+        systemd = the boss deciding what gets started, when, and in what order.
+        Red Hat contributed to open source community and is used by every Linux distro now
+
+        systemd manages system using units, everything that runs at boot/responds to events at a later stage goes through systemd
+
+        e.g. if you want a web server to start automatically at boot... in RHEL that means installing and managing the HTTPD Service
+
+        ******
+        dnf install -y httpd 
+        echo 'hello world' | tee /var/www/html/index.html
+        systemctl start httpd 
+        systemctl enable httpd 
+        systemctl enable --now httpd 
+        systemctl status httpd 
+        firewall-cmd --add-service http
+        !! (in bash this means the previous command in bash)
+
+        *********
+
+        
+
 
 
 
