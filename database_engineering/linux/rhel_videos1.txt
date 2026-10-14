@@ -211,7 +211,62 @@
 
         *********
 
-        
+    ___________________________
+
+    Deploying an app runtime to host a simple app
+
+        *****
+        dnf install -y nodejs (in bash)
+        git clone ...
+        npm install
+        cat myapp.service
+        sudo cp myapp.service /etc/systemd/system/
+        sudo systemctl daemon-reload
+        sudo systemctl enable --now myapp
+        systemctl status myapp
+        sudo firewall-cms --add-port 8080/tcp
+        !! --permanent
+        *******
+
+        then open localhost 8080
+
+    _________________________________________
+
+    
+    Using image mode with BootC
+
+        BootC = instead of building up your server piece by piece, you use a single, complete image (blueprint for the whole system)
+
+        If you need to update the OS version or the packages used in the image, you just build a new image. You point your server at
+        the new image, then reboot.
+
+        **********
+        ssh bootchost
+        bootc status
+        systemctl status httpd
+        rpm -q httpd
+        **********
+
+        in browser, go to bootchost.zero-effort.net (or whatever the name)
+
+    ___________________________________________
+
+    Insights image builder
+
+        golden image: perfect template, ready-to-go snapshot of your operating system
+
+        1. insights image builder
+        2. rhel image builder
+
+    ______________________________
+
+    rhel web console for managing systems 
+
+        cockpit.socket
+
+    ______________________________
+
+
 
 
 

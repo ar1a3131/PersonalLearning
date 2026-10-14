@@ -21,5 +21,9 @@ Informatica Intelligent Data Management Cloud (IDMC)
     _________________________________________
 
     go to Data Integration from informatica cloud link
+    - make sure you're in a lab instance
+    - press 'New' in the top left and check out all of the options
+    - on the right side panel, go to explore and look at exisitng projects/objects
+    
 
 
